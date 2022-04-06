@@ -1,6 +1,6 @@
 const {
     Connection,
-    Publickey,
+    PublicKey,
     clusterApiUrl,
     Keypair,
     LAMPORTS_PER_SOL
@@ -8,8 +8,6 @@ const {
 
 const wallet = new Keypair()
 
-const publicKey = wallet._keypair.publicKey 
+const publicKey = new PublicKey(wallet._keypair.publicKey) 
 const secretKey = wallet._keypair.secretKey
 
-console.log(publicKey)
-console.log(secretKey)
